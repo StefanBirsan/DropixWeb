@@ -1,0 +1,69 @@
+.cool-button {
+    border-radius: 16px;
+    height: 238px;
+    position: relative;
+    width: 286px;
+}
+
+.cool-button .text-wrapper {
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 30px;
+    font-weight: 600;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 130px;
+    width: 201px;
+}
+
+.cool-button .image {
+    height: 98px;
+    left: 94px;
+    object-fit: cover;
+    position: absolute;
+    top: 21px;
+    width: 98px;
+}
+
+.cool-button .overlap-group {
+    height: 104px;
+    left: 91px;
+    position: absolute;
+    top: 12px;
+    width: 104px;
+}
+
+.cool-button .div {
+    height: 87px;
+    left: 9px;
+    position: absolute;
+    top: 8px;
+    width: 87px;
+}
+
+.cool-button .img {
+    height: 104px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 104px;
+}
+
+.cool-button.default {
+    background-color: #f9f6e6;
+}
+
+.cool-button.variant-2 {
+    background-color: #bad8b6;
+}
+
+.cool-button.default .text-wrapper {
+    color: #000000;
+}
+
+.cool-button.variant-2 .text-wrapper {
+    color: #ffffff;
+}

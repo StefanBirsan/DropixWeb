@@ -1,0 +1,28 @@
+.navbar-button {
+    background-color: #8d77ab;
+    height: 60px;
+    position: relative;
+    width: 203px;
+}
+
+.navbar-button .text-wrapper {
+    color: #000000;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 24px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 11px;
+    width: 203px;
+}
+
+.navbar-button:hover {
+    background-color: #9c61ec;
+}
+
+.navbar-button:hover .text-wrapper {
+    color: #ffffff;
+}

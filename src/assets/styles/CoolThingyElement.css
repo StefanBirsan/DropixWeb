@@ -1,0 +1,64 @@
+.cool-thingy-element {
+    height: 344px;
+    width: 458px;
+}
+
+.cool-thingy-element .overlap-group {
+    height: 243px;
+    left: 81px;
+    position: relative;
+    top: 50px;
+    width: 377px;
+}
+
+.cool-thingy-element .rectangle {
+    border-radius: 35px;
+    height: 231px;
+    left: 0;
+    position: absolute;
+    top: 6px;
+    width: 377px;
+}
+
+.cool-thingy-element .polygon {
+    height: 243px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 211px;
+}
+
+.cool-thingy-element .text-wrapper {
+    color: #000000;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 26px;
+    font-weight: 600;
+    height: 49px;
+    left: 157px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 10px;
+    width: 196px;
+}
+
+.cool-thingy-element .div {
+    color: #000000;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 17px;
+    font-weight: 600;
+    left: 214px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 59px;
+    width: 145px;
+}
+
+.cool-thingy-element .default {
+    background-color: #f9f6e6;
+}
+
+.cool-thingy-element .variant-2 {
+    background-color: #bad8b6;
+}

@@ -1,0 +1,30 @@
+.button-small {
+    background-color: #bad8b6;
+    border-radius: 92px;
+    height: 47px;
+    position: relative;
+    width: 136px;
+}
+
+.button-small .text-wrapper {
+    color: #ffffff;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    height: 37px;
+    left: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 107px;
+}
+
+.button-small:hover {
+    background-color: #e1eacd;
+}
+
+.button-small:hover .text-wrapper {
+    color: #000000;
+}

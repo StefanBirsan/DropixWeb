@@ -1,0 +1,340 @@
+.desktop {
+  background-color: #f9f6e6;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 1860px;
+}
+
+
+.desktop .overlap-wrapper {
+  background-color: #f9f6e6;
+  height: 1860px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.desktop .overlap {
+  height: 1860px;
+  left: -22px;
+  position: relative;
+  width: 100%;
+}
+
+.desktop .rectangle-2 {
+  background-color: #8d77ab;
+  height: 169px;
+  left: 21px;
+  position: absolute;
+  top: 1691px;
+  width: 1500px;
+}
+
+.desktop .happy-person {
+  height: 2820px;
+  left: 22px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 2127px;
+}
+
+.desktop .deliveryvanwallp {
+  height: 736px;
+  left: 22px;
+  object-fit: cover;
+  position: absolute;
+  top: 12px;
+  width: 100%;
+}
+
+.desktop .rectangle-3 {
+  background-color: #8d77ab;
+  height: 69px;
+  left: 22px;
+  position: absolute;
+  top: 0;
+  width: 1500px;
+}
+
+.desktop .input {
+  background-color: #383838;
+  border-bottom-style: solid;
+  border-color: #767676;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-style: solid;
+  border-top-style: solid;
+  height: 30px;
+  left: 451px;
+  position: absolute;
+  top: 338px;
+  width: 613px;
+}
+
+.desktop .div-placeholder-wrapper {
+  border: 7px solid;
+  border-color: #383838;
+  height: 44px;
+  left: -7px;
+  position: relative;
+  top: -7px;
+  width: 627px;
+}
+
+.desktop .div-placeholder {
+  height: 20px;
+  position: relative;
+  top: 10px;
+  width: 609px;
+}
+
+.desktop .text-wrapper-2 {
+  color: #757575;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-size: 17px;
+  font-weight: 600;
+  height: 20px;
+  left: 251px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 109px;
+}
+
+.desktop .button-small-instance {
+  left: 690px !important;
+  position: absolute !important;
+  top: 410px !important;
+}
+
+.desktop .cool-thingy-element-instance {
+  left: 483px !important;
+  position: absolute !important;
+  top: 512px !important;
+}
+
+.desktop .design-component-instance-node {
+  text-align: right !important;
+}
+
+.desktop .cool-thingy-element-2 {
+  font-size: 19px !important;
+}
+
+.desktop .cool-thingy-element-3 {
+  left: 966px !important;
+  position: absolute !important;
+  top: 512px !important;
+}
+
+.desktop .cool-thingy-element-4 {
+  left: 0 !important;
+  position: absolute !important;
+  top: 512px !important;
+}
+
+.desktop .rectangle-4 {
+  background-color: #8d77ab;
+  border-radius: 14px;
+  height: 105px;
+  left: 48px;
+  position: absolute;
+  top: 23px;
+  width: 121px;
+}
+
+.desktop .img-2 {
+  height: 120px;
+  left: 22px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 173px;
+}
+
+.desktop .rectangle-5 {
+  background-color: #8d77ab;
+  height: 32px;
+  left: 40px;
+  position: absolute;
+  top: 23px;
+  width: 20px;
+}
+
+.desktop .rectangle-6 {
+  background-color: #8d77ab;
+  height: 4px;
+  left: 77px;
+  position: absolute;
+  top: 30px;
+  transform: rotate(31.24deg);
+  width: 10px;
+}
+
+.desktop .image-8 {
+  height: 98px;
+  left: 1064px;
+  object-fit: cover;
+  position: absolute;
+  top: 635px;
+  width: 98px;
+}
+
+.desktop .image-9 {
+  height: 98px;
+  left: 592px;
+  object-fit: cover;
+  position: absolute;
+  top: 635px;
+  width: 98px;
+}
+
+.desktop .image-10 {
+  height: 98px;
+  left: 119px;
+  object-fit: cover;
+  position: absolute;
+  top: 635px;
+  width: 98px;
+}
+
+.desktop .rectangle-7 {
+  background-color: #000000;
+  height: 15px;
+  left: 75px;
+  position: absolute;
+  top: 883px;
+  width: 186px;
+}
+
+.desktop .text-wrapper-3 {
+  color: #000000;
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-size: 50px;
+  font-weight: 800;
+  left: 75px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 906px;
+  white-space: nowrap;
+  width: 538px;
+}
+
+.desktop .navbar-button-instance {
+  height: 69px !important;
+  left: 1323px !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 64px !important;
+}
+
+.desktop .navbar-button-2 {
+  top: 13px !important;
+  width: 64px !important;
+}
+
+.desktop .navbar-button-3 {
+  height: 69px !important;
+  left: 1195px !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.desktop .navbar-button-4 {
+  font-family: "Rubik-SemiBold", Helvetica !important;
+  top: 13px !important;
+}
+
+.desktop .navbar-button-5 {
+  height: 69px !important;
+  left: 992px !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.desktop .navbar-button-6 {
+  top: 13px !important;
+}
+
+.desktop .navbar-button-7 {
+  height: 69px !important;
+  left: 789px !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.desktop .cool-button-thing-instance {
+  left: 404px !important;
+  position: absolute !important;
+  top: 1022px !important;
+}
+
+.desktop .cool-button-thing2 {
+  left: 58px !important;
+  position: absolute !important;
+  top: 1022px !important;
+}
+
+.desktop .cool-button-thing3 {
+  left: 58px !important;
+  position: absolute !important;
+  top: 1298px !important;
+}
+
+.desktop .cool-button-instance {
+  left: 416px !important;
+  position: absolute !important;
+  top: 1298px !important;
+}
+
+.desktop .rectangle-8 {
+  background-color: #8d77ab;
+  height: 13px;
+  left: 48px;
+  position: absolute;
+  top: 83px;
+  width: 6px;
+}
+
+.desktop .regulamente-ANPC {
+  color: #d1d1d1;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-size: 25px;
+  font-weight: 600;
+  left: 58px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 1730px;
+  width: 1363px;
+}
+
+.desktop .span {
+  text-decoration: underline;
+}
+
+.desktop .text-wrapper-4 {
+  color: #d1d1d1;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.desktop .rectangle-9 {
+  background-color: #f9f6e6;
+  height: 20px;
+  left: 1027px;
+  position: absolute;
+  top: 917px;
+  transform: rotate(-3.85deg);
+  width: 58px;
+}
