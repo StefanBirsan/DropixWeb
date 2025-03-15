@@ -6,6 +6,85 @@
     align-items: center;
     padding-top: 50px;
 }
+.text-wrapper-2 {
+    color: #757575;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 17px;
+    font-weight: 600;
+    height: 20px;
+    left: 251px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    width: 109px;
+}
+.text-wrapper-3 {
+    color: #000000;
+    font-family: "Roboto-ExtraBold", Helvetica;
+    font-size: 50px;
+    font-weight: 800;
+    left: 75px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 906px;
+    white-space: nowrap;
+    width: 538px;
+}
+.text-wrapper-4 {
+    color: #d1d1d1;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+.rectangle-8 {
+    background-color: #8d77ab;
+    height: 13px;
+    left: 48px;
+    position: absolute;
+    top: 83px;
+    width: 6px;
+}
+.footer-links {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8d77ab; /* Purple background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.text-wrapper-4 {
+    display: none; /* Remove unnecessary spacing */
+}
+
+.rectangle-9 {
+    background-color: #f9f6e6;
+    height: 20px;
+    left: 1027px;
+    position: absolute;
+    top: 917px;
+    transform: rotate(-3.85deg);
+    width: 58px;
+}
 .rectangle-3 {
     background-color: #8d77ab;
     height: 69px;

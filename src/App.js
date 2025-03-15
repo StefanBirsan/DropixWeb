@@ -1,8 +1,10 @@
-// App.js
-import React from 'react';
-import { useState } from "react";
-import SecondPage from "./SecondPage";
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import SecondPage from "./SecondPage";
+import RiseAndChallengesPage from "./RiseAndChallengesPage";
+import TreesSavedPage from "./TreesSavedPage";
+import StatisticsPage from "./StatisticsPage";
+import JoinUsPage from "./JoinUsPage";
 import { ButtonSmall } from './components/buttons/buttonsmall.jsx';
 import { CoolButtonThing } from './components/buttons/CoolButtonThing.jsx';
 import { CoolButtonThing2 } from './components/buttons/CoolButtonThing2.jsx';
@@ -19,25 +21,18 @@ import image3 from './assets/images/image 3.png';
 import logoitfesttransparent1 from './assets/images/LogoITFestTransparent.png';
 import './assets/styles/index.css';
 
-const App = () => {
+const MainPage = () => {
   const [awb, setAwb] = useState("");
   const navigate = useNavigate();
 
   return (
-      <Routes>  {/* ✅ Use Routes */}
-        <Route path="/" element={
       <div className="desktop">
         <div className="overlap-wrapper">
           <div className="overlap">
             <div className="rectangle-2" />
             <img className="happy-person" alt="Happy person" src={happyPerson1} />
-            <img
-                className="deliveryvanwallp"
-                alt="Delivery van"
-                src={deliveryvanwallp1}
-            />
+            <img className="deliveryvanwallp" alt="Delivery van" src={deliveryvanwallp1} />
             <div className="rectangle-3" />
-            return (
             <>
               <input
                   className="input"
@@ -56,7 +51,6 @@ const App = () => {
                   }}
               />
             </>
-            );
 
             <CoolThingyElement
                 className="cool-thingy-element-instance"
@@ -119,50 +113,101 @@ const App = () => {
                 image="image4.png"
                 property1="default"
                 text="RISE AND CHALLENGES"
+                onClick={() => navigate('/rise-and-challenges')}
             />
             <CoolButtonThing2
                 className="cool-button-thing2"
                 image="image6.png"
                 property1="default"
                 text="TREES SAVED"
+                onClick={() => navigate('/trees-saved')}
             />
             <CoolButtonThing3
                 className="cool-button-thing3"
                 image="image8.png"
                 property1="default"
                 text="STATISTICS"
+                onClick={() => navigate('/statistics')}
             />
             <CoolButtonThing4
                 className="cool-button-instance"
                 image="image10.png"
                 property1="default"
                 text="JOIN US"
+                onClick={() => navigate('/join-us')}
             />
             <div className="rectangle-8" />
             <p className="regulamente-ANPC">
-              <a
-                  href="https://www.cargus.ro/regulamente/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-              >
+              <a href="https://www.cargus.ro/regulamente/" rel="noopener noreferrer" target="_blank">
                 <span className="span">Regulamente</span>
               </a>
               <span className="text-wrapper-4">&nbsp;</span>
-              <a
-                  href="https://anpc.ro/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-              >
+              <a href="https://anpc.ro/" rel="noopener noreferrer" target="_blank">
                 <span className="span">ANPC</span>
               </a>
-              {/* Add the rest of your links here */}
+              <span className="text-wrapper-4">&nbsp;</span>
+              <a href="https://www.cargus.ro/wp-content/uploads/Cargus-Oferta-Comerciala-Clienti-Contract.pdf" rel="noopener noreferrer" target="_blank">
+                <span className="span">Oferta comerciala</span>
+              </a>
+              <span className="text-wrapper-4">&nbsp;</span>
+              <a href="https://www.cargus.ro/index-de-combustibil/" rel="noopener noreferrer" target="_blank">
+                <span className="span">Index de combustibil</span>
+              </a>
+              <span className="text-wrapper-4">&nbsp;</span>
+              <a href="https://www.cargus.ro/blog/" rel="noopener noreferrer" target="_blank">
+                <span className="span">Știri și articole</span>
+              </a>
+              <span className="text-wrapper-4">&nbsp;</span>
+              <a href="https://www.cargus.ro/personal/intrebari-frecvente/" rel="noopener noreferrer" target="_blank">
+                <span className="span">FAQ</span>
+              </a>
+              <span className="text-wrapper-4">&nbsp;</span>
+              <a href="https://www.cargus.ro/cariere/" rel="noopener noreferrer" target="_blank">
+                <span className="span">Cariere</span>
+              </a>
+              <span className="text-wrapper-4">&nbsp;</span>
+              <a href="https://www.cargus.ro/contacteaza-ne/" rel="noopener noreferrer" target="_blank">
+                <span className="span">Contact Center</span>
+              </a>
+              <span className="text-wrapper-4">&nbsp;</span>
+              <a href="https://www.cargus.ro/documente-oficiale-persoane-fizice/" rel="noopener noreferrer" target="_blank">
+                <span className="span">Documente oficiale persoane fizice</span>
+              </a>
+              <span className="text-wrapper-4">&nbsp;</span>
+              <a href="https://www.cargus.ro/documente-oficiale-persoane-juridice/" rel="noopener noreferrer" target="_blank">
+                <span className="span">Documente oficiale persoane juridice</span>
+              </a>
+              <span className="text-wrapper-4">
+              {" "}
+                <br />
+            </span>
+              <a href="https://www.cargus.ro/politica-de-prelucrare-a-datelor-cu-caracter-personal/" rel="noopener noreferrer" target="_blank">
+              <span className="span">
+                Politica de prelucrare a datelor cu caracter personal
+              </span>
+              </a>
+              <span className="text-wrapper-4">&nbsp;</span>
+              <a href="https://www.cargus.ro/politica-de-confidentialitate/" rel="noopener noreferrer" target="_blank">
+                <span className="span">Politica de confidențialitate</span>
+              </a>
+              <span className="text-wrapper-4"> Preferinte cookie</span>
             </p>
             <div className="rectangle-9" />
           </div>
         </div>
       </div>
-        } />
-        <Route path="/second" element={<SecondPage />} />  {/* ✅ Ensure this route exists */}
+  );
+};
+
+const App = () => {
+  return (
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/second" element={<SecondPage />} />
+        <Route path="/rise-and-challenges" element={<RiseAndChallengesPage />} />
+        <Route path="/trees-saved" element={<TreesSavedPage />} />
+        <Route path="/statistics" element={<StatisticsPage />} />
+        <Route path="/join-us" element={<JoinUsPage />} />
       </Routes>
   );
 };
