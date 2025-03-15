@@ -29,7 +29,7 @@
   left: 21px;
   position: absolute;
   top: 1691px;
-  width: 1500px;
+  width: 100%;
 }
 
 .desktop .happy-person {
@@ -56,7 +56,7 @@
   left: 22px;
   position: absolute;
   top: 0;
-  width: 1500px;
+  width: 100%;
 }
 
 .desktop .input {

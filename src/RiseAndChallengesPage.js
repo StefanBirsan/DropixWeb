@@ -1,13 +1,55 @@
 import { useNavigate } from "react-router-dom";
-import "./assets/styles/SecondPage.css";
+import "./assets/styles/RiseAndChallengesPage.css";
 import logoitfesttransparent1 from "./assets/images/LogoITFestTransparent.png";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ButtonSmall } from "./components/buttons/buttonsmall";
+
+// Carousel component that will handle the background images
+const BackgroundCarousel = ({ images, interval = 5000 }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, interval);
+
+        return () => clearInterval(timer);
+    }, [images.length, interval]);
+
+    return (
+        <div className="background-carousel">
+            {images.map((image, index) => (
+                <div
+                    key={index}
+                    className="carousel-image"
+                    style={{
+                        backgroundImage: `url(${image})`,
+                        opacity: index === currentIndex ? 1 : 0,
+                    }}
+                />
+            ))}
+        </div>
+    );
+};
 
 const RiseAndChallengesPage = () => {
     const navigate = useNavigate();
+
+    // Add your image URLs here
+    const backgroundImages = [
+        "https://images.unsplash.com/photo-1580674684081-7617fbf3d745",
+        "https://images.unsplash.com/photo-1597733336794-12d05021d510",
+        "https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1"
+    ];
+
     return (
         <div className="second-page">
+            {/* Background Carousel */}
+            <BackgroundCarousel images={backgroundImages} interval={7000} />
+
+            {/* Overlay to make content more readable */}
+            <div className="background-overlay" />
+
             {/* Header */}
             <div className="rectangle-3" />
             <div className="rectangle-4" />
@@ -16,15 +58,21 @@ const RiseAndChallengesPage = () => {
             <div className="rectangle-6" />
             <ButtonSmall className="back-button" text="<- Back" onClick={() => navigate("/")} />
 
-            {/* Content */}
-            <div className="content-container" style={{ marginTop: "100px", textAlign: "center" }}>
-                <h2>Rise and Challenges</h2>
-                <p>
-                    Welcome to the Rise and Challenges page. This section is dedicated to inspiring stories and overcoming obstacles.
-                    Enjoy some random text here as a placeholder.
+            {/* Text Background Rectangle on the right */}
+            <div className="text-background-rectangle" />
+
+            {/* Content positioned over the rectangle */}
+            <div className="content-container">
+                <h2 className="page-title">Rise and Challenges</h2>
+                <p className="page-description">
+                    Five computer science students created DropX to solve problems found in the current delivery system regarding waste and carbon emissions.
+                    Their smart container system faced challenges in hardware durability and cellular connectivity implementation.
+                    Despite initially working from a garage with minimal funding, their breakthrough came when a major delivery company ran a successful pilot, leading to their first significant investment.
+                    Thought all of this is mostly fake, we hope that it might become true.
                 </p>
-                <img className="content-image" alt="Placeholder" src="https://via.placeholder.com/300" />
             </div>
+
+            <div className="rectangle-10" />
 
             {/* Footer */}
             <div className="footer-links">

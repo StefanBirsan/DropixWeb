@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "./assets/styles/SecondPage.css";
+import "./assets/styles/JoinUsPage.css";
 import logoitfesttransparent1 from "./assets/images/LogoITFestTransparent.png";
 import React from "react";
 import { ButtonSmall } from "./components/buttons/buttonsmall";
@@ -23,7 +23,6 @@ const JoinUsPage = () => {
                     Welcome to the Join Us page. Learn more about how to become part of our community and explore exciting opportunities.
                     This is placeholder text—feel free to update it.
                 </p>
-                <img className="content-image" alt="Placeholder" src="https://via.placeholder.com/300" />
             </div>
 
             {/* Footer */}
