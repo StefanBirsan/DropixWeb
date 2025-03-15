@@ -13,6 +13,7 @@ import { CoolButtonThing4 } from './components/buttons/CoolButtonThing4.jsx';
 import { CoolThingyElement } from './components/elements/CoolThingyElement.jsx';
 import { NavbarButton } from './components/navbar/ NavbarButton.jsx';
 import { Input } from "./components/elements/input.jsx";
+import AWBSearch from "./AWBSearch";
 import deliveryvanwallp1 from './assets/images/deliveryvanwallp 1.jpg';
 import happyPerson1 from './assets/images/happy person 1.png';
 import image1 from './assets/images/image 1.png';
