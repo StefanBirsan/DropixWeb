@@ -1,0 +1,245 @@
+/* Combined CSS for SecondPage */
+
+.second-page {
+    background-color: #f9f6e6;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.map-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.content-overlay {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let map events pass through */
+}
+
+/* Make specific elements receive pointer events */
+.back-button,
+.awb-container,
+.footer-links,
+.footer-links a {
+    pointer-events: auto;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 10px 20px;
+    background-color: #8d77ab;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+/* Back button styles */
+.back-button {
+    background: #BAD8B6;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    right:15px !important;
+    position: fixed!important;
+    top: 10px !important;
+}
+
+/* Footer styles */
+.footer-links {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8d77ab; /* Purple background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Text wrapper styles */
+.text-wrapper-2 {
+    color: #757575;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 17px;
+    font-weight: 600;
+    height: 20px;
+    left: 251px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    width: 109px;
+}
+
+.text-wrapper-3 {
+    color: #000000;
+    font-family: "Roboto-ExtraBold", Helvetica;
+    font-size: 50px;
+    font-weight: 800;
+    left: 75px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 906px;
+    white-space: nowrap;
+    width: 538px;
+}
+
+.text-wrapper-4 {
+    color: #d1d1d1;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0;
+    display: none; /* Remove unnecessary spacing */
+}
+
+/* Rectangle styles */
+.rectangle-3,
+.rectangle-4,
+.rectangle-5,
+.rectangle-6,
+.rectangle-8,
+.rectangle-9,
+.rectangle-10 {
+    background-color: #8d77ab;
+}
+
+.rectangle-3 {
+    height: 69px;
+    left: 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.rectangle-4 {
+    border-radius: 14px;
+    height: 105px;
+    left: 48px;
+    position: fixed;
+    top: 23px;
+    width: 121px;
+}
+
+.rectangle-5 {
+    height: 32px;
+    left: 40px;
+    position: fixed;
+    top: 23px;
+    width: 20px;
+}
+
+.rectangle-6 {
+    height: 4px;
+    left: 77px;
+    position: fixed;
+    top: 30px;
+    transform: rotate(31.24deg);
+    width: 10px;
+}
+
+.rectangle-8 {
+    height: 13px;
+    left: 48px;
+    position: fixed;
+    top: 83px;
+    width: 6px;
+}
+
+.rectangle-9 {
+    height: 20px;
+    left: 1027px;
+    position: fixed;
+    top: 917px;
+    transform: rotate(-3.85deg);
+    width: 58px;
+}
+.rectangle-10 {
+    width: 586px;
+    height: 511px;
+    right: 100px;
+
+    border-radius: 50px;
+}
+.content-container {
+    position: absolute;
+    top: 120px;
+    right: 100px;
+    width: 410px;
+    text-align: left;
+    z-index: 10;
+    padding: 20px;
+}
+
+.text-background-rectangle {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    width: 450px;
+    height: 400px;
+    background-color: #8d77ab;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+.page-title {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: none;
+}
+.page-description {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-shadow: none;
+}
+/* Image styles */
+.img-2 {
+    height: 120px;
+    left: 22px;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    width: 173px;
+}
+
+/* Make Google Maps controls work */
+.gm-style {
+    pointer-events: auto;
+}

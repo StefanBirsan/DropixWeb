@@ -1,13 +1,16 @@
 import { useNavigate } from "react-router-dom";
-import "./assets/styles/SecondPage.css";
+import "./assets/styles/StatisticsPage.css";
 import logoitfesttransparent1 from "./assets/images/LogoITFestTransparent.png";
 import React from "react";
+import image1 from './assets/images/office.jpg';
+import DeliveryComparisonChart from './components/elements/DeliveryComparisonChart.jsx';
 import { ButtonSmall } from "./components/buttons/buttonsmall";
 
 const StatisticsPage = () => {
     const navigate = useNavigate();
     return (
         <div className="second-page">
+            <div className="second-page" style={{ backgroundImage: `url(${image1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             {/* Header */}
             <div className="rectangle-3" />
             <div className="rectangle-4" />
@@ -17,14 +20,15 @@ const StatisticsPage = () => {
             <ButtonSmall className="back-button" text="<- Back" onClick={() => navigate("/")} />
 
             {/* Content */}
-            <div className="content-container" style={{ marginTop: "100px", textAlign: "center" }}>
-                <h2>Statistics</h2>
-                <p>
-                    Welcome to the Statistics page. View a variety of data and figures related to our performance and milestones.
-                    This is placeholder text for now.
+            <DeliveryComparisonChart/>
+            <div className="content-container">
+                <h2 className="page-title">Statistics</h2>
+                <p className="page-description">
+                    We work with the biggest deliver companies from Romania like FAN Curier, DHL, GLS, FedEX, UPS, Cargus and Sameday. So far there have been no complaints and just amazing collaboration. By using our services our clients managed up to a 30% increase in packages delivered in the same time, all while using less cardboard boxes resulting in up to 4 trees saved per day.
+                    As you can see on the left, all companies have seen not only an increase in profits, since the boxes are reusable, but all have them have seen an increase in Sales overall, due to this Green-Tech alternative.
                 </p>
-                <img className="content-image" alt="Placeholder" src="https://via.placeholder.com/300" />
             </div>
+
 
             {/* Footer */}
             <div className="footer-links">
@@ -68,6 +72,7 @@ const StatisticsPage = () => {
                     <span className="text-wrapper-4"> Preferinte cookie</span>
                 </p>
             </div>
+        </div>
         </div>
     );
 };

@@ -72,7 +72,7 @@ const RiseAndChallengesPage = () => {
                 </p>
             </div>
 
-            <div className="rectangle-10" />
+
 
             {/* Footer */}
             <div className="footer-links">

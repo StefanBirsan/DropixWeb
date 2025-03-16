@@ -14,7 +14,7 @@ export const CoolButtonThing2 = ({ property1, className, text, onClick }) => {
             className={`cool-button ${state.property1} ${className}`}
             onMouseLeave={() => dispatch("mouse_leave")}
             onMouseEnter={() => dispatch("mouse_enter")}
-            onClick={onClick} // Added onClick
+            onClick={onClick}
         >
             <div className="text-wrapper">{text}</div>
             <img

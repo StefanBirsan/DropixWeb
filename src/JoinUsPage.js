@@ -1,13 +1,49 @@
 import { useNavigate } from "react-router-dom";
 import "./assets/styles/JoinUsPage.css";
 import logoitfesttransparent1 from "./assets/images/LogoITFestTransparent.png";
-import React from "react";
+import image1 from './assets/images/bus.jpg'; // Background image import - change path later
+import React, { useState } from "react";
 import { ButtonSmall } from "./components/buttons/buttonsmall";
 
 const JoinUsPage = () => {
     const navigate = useNavigate();
+    const [formData, setFormData] = useState({
+        fullName: "",
+        email: "",
+        cv: null
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleFileChange = (e) => {
+        setFormData({
+            ...formData,
+            cv: e.target.files[0]
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Form submission logic would go here
+        // Currently just logging the data since we're not sending it anywhere
+        console.log("Form Data:", formData);
+        alert("Application submitted successfully!");
+        // Reset form
+        setFormData({
+            fullName: "",
+            email: "",
+            cv: null
+        });
+    };
+
     return (
-        <div className="second-page">
+        <div className="second-page" style={{ backgroundImage: `url(${image1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             {/* Header */}
             <div className="rectangle-3" />
             <div className="rectangle-4" />
@@ -18,11 +54,67 @@ const JoinUsPage = () => {
 
             {/* Content */}
             <div className="content-container" style={{ marginTop: "100px", textAlign: "center" }}>
-                <h2>Join Us</h2>
-                <p>
-                    Welcome to the Join Us page. Learn more about how to become part of our community and explore exciting opportunities.
-                    This is placeholder text—feel free to update it.
-                </p>
+                <h2>Join Our Team</h2>
+
+                <div className="form-container" style={{ maxWidth: "500px", margin: "0 auto", padding: "20px", backgroundColor: "rgba(255, 255, 255, 0.8)", borderRadius: "8px" }}>
+                    <form onSubmit={handleSubmit}>
+                        <div className="form-group" style={{ marginBottom: "15px", textAlign: "left" }}>
+                            <label htmlFor="fullName" style={{ display: "block", marginBottom: "5px", fontWeight: "bold" }}>Full Name</label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                value={formData.fullName}
+                                onChange={handleInputChange}
+                                required
+                                style={{ width: "100%", padding: "8px", borderRadius: "4px", border: "1px solid #ccc" }}
+                            />
+                        </div>
+
+                        <div className="form-group" style={{ marginBottom: "15px", textAlign: "left" }}>
+                            <label htmlFor="email" style={{ display: "block", marginBottom: "5px", fontWeight: "bold" }}>Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                required
+                                style={{ width: "100%", padding: "8px", borderRadius: "4px", border: "1px solid #ccc" }}
+                            />
+                        </div>
+
+                        <div className="form-group" style={{ marginBottom: "15px", textAlign: "left" }}>
+                            <label htmlFor="cv" style={{ display: "block", marginBottom: "5px", fontWeight: "bold" }}>Upload CV (PDF only)</label>
+                            <input
+                                type="file"
+                                id="cv"
+                                name="cv"
+                                accept=".pdf"
+                                onChange={handleFileChange}
+                                style={{ width: "100%" }}
+                            />
+                            {formData.cv && (
+                                <p style={{ margin: "5px 0 0", fontSize: "14px" }}>Selected file: {formData.cv.name}</p>
+                            )}
+                        </div>
+
+                        <button
+                            type="submit"
+                            style={{
+                                backgroundColor: "#4CAF50",
+                                color: "white",
+                                padding: "10px 15px",
+                                border: "none",
+                                borderRadius: "4px",
+                                cursor: "pointer",
+                                fontWeight: "bold"
+                            }}
+                        >
+                            Submit Application
+                        </button>
+                    </form>
+                </div>
             </div>
 
             {/* Footer */}
