@@ -113,7 +113,7 @@ const TreesSavedPage = () => {
                 {/* Right side - Text with transparent background */}
                 <div className="content-container-cool" style={{ marginLeft:"-200px" ,marginTop: "-120px", textAlign: "center" }}>
                     <div style={{
-                        backgroundColor: "rgba(255, 255, 255, 0.7)",
+                        backgroundColor: "rgba(255, 255, 255, 1)",
                         padding: "30px",
                         borderRadius: "10px",
                         width: "100%",
