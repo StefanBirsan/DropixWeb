@@ -13,6 +13,7 @@ const SecondPage = () => {
     const mapRef = useRef(null);
     const mapInstanceRef = useRef(null);
     const markerRef = useRef(null);
+    const deliveryVehicleMarkerRef = useRef(null);
 
     const [awbData, setAwbData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -92,7 +93,49 @@ const SecondPage = () => {
         }
     }, [mapLoaded, awbData]);
 
+    const showDeliveryVehicle = (cityLocation) => {
+        if (!mapInstanceRef.current || !window.google) return;
+
+        // Remove previous delivery vehicle marker if it exists
+        if (deliveryVehicleMarkerRef.current) {
+            deliveryVehicleMarkerRef.current.setMap(null);
+        }
+
+        // Calculate a position slightly offset from the destination
+        const vehiclePosition = {
+            lat: cityLocation.lat() - 0.007,
+            lng: cityLocation.lng() - 0.01
+        };
+
+        // Create a custom marker for the delivery vehicle
+        deliveryVehicleMarkerRef.current = new window.google.maps.Marker({
+            position: vehiclePosition,
+            map: mapInstanceRef.current,
+            title: "Delivery Vehicle",
+            icon: {
+                path: window.google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                scale: 6,
+                fillColor: "#FF5722",
+                fillOpacity: 1,
+                strokeWeight: 2,
+                strokeColor: "#FFF",
+                rotation: 45
+            },
+            animation: window.google.maps.Animation.BOUNCE
+        });
+
+        // Add info window for the delivery vehicle
+        const deliveryInfoWindow = new window.google.maps.InfoWindow({
+            content: `<div><strong>Delivery Vehicle</strong><br>Your package is on its way!</div>`
+        });
+
+        deliveryVehicleMarkerRef.current.addListener('click', () => {
+            deliveryInfoWindow.open(mapInstanceRef.current, deliveryVehicleMarkerRef.current);
+        });
+    };
+
     // Function to focus map on a specific city
+    // Replace your existing focusMapOnCity function with this one
     const focusMapOnCity = (cityName) => {
         if (!mapInstanceRef.current || !window.google) return;
 
@@ -126,6 +169,16 @@ const SecondPage = () => {
                 markerRef.current.addListener('click', () => {
                     infoWindow.open(mapInstanceRef.current, markerRef.current);
                 });
+
+                // Show delivery vehicle if status is "Out for Delivery"
+                if (awbData && awbData.Status === "Out for Delivery") {
+                    showDeliveryVehicle(cityLocation);
+                } else {
+                    // Remove delivery vehicle marker if status is not "Out for Delivery"
+                    if (deliveryVehicleMarkerRef.current) {
+                        deliveryVehicleMarkerRef.current.setMap(null);
+                    }
+                }
             }
         });
     };

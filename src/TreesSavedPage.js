@@ -21,16 +21,16 @@ const TreesSavedPage = () => {
             {/* Content */}
             <div className="content-container" style={{ marginTop: "100px", display: "flex", justifyContent: "space-between", padding: "0 40px" }}>
                 {/* Left side - Cardboard box with tree */}
-                <div className="visual-container" style={{ flex: "1", maxWidth: "45%" }}>
+                <div className="visual-container" style={{ flex: "1", maxWidth: "1%" }}>
                     {/* Cardboard box */}
                     <div className="cardboard-box" style={{
-                        left: "-600px",
-                        top: "245px",
+                        left: "200px",
+                        top: "500px",
                         width: "240px",
                         height: "180px",
                         backgroundColor: "#C19A6B",
                         borderRadius: "8px",
-                        position: "relative",
+                        position: "fixed",
                         margin: "0 auto",
                         boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
                         border: "2px solid #8B4513",
@@ -111,12 +111,12 @@ const TreesSavedPage = () => {
                     </div>
                 </div>
                 {/* Right side - Text with transparent background */}
-                <div className="content-container" style={{ marginLeft:"-200" ,marginTop: "-320px", textAlign: "center" }}>
+                <div className="content-container-cool" style={{ marginLeft:"-200px" ,marginTop: "-120px", textAlign: "center" }}>
                     <div style={{
                         backgroundColor: "rgba(255, 255, 255, 0.7)",
                         padding: "30px",
                         borderRadius: "10px",
-                        width: "130%",
+                        width: "100%",
                         boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
                     }}>
                         <h2>Statistics</h2>
